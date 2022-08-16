@@ -86,13 +86,18 @@ Inside the data directory, there is a file called "users.csv". This file contain
 
 Identify users that have email addresses with six or less characters before the @ symbol where none of these characters are numbers.
 ```
-PROVIDE A SOLUTION HERE
+ggrep -Eo "\b[a-zA-Z0-9.-]+@[a-zA-Z0-9.-]+.[a-zA-Z0-9.-],+\b" data/users.csv 
+  for all emails
+ggrep -Eo "\b[a-zA-Z.-]+@[a-zA-Z0-9.-]+.[a-zA-Z0-9.-]\,+\b" data/users.csv 
+  no numbers 
+ggrep -Eo "\b[a-zA-Z.-]+@[a-zA-Z0-9.-]+.[a-zA-Z0-9.-]\,+\b" data/users.csv
 ```
 
 
 Marketing research has shown that the paper business is picking up in the academia space. Corporate has requested a list of all registered users that have an edu emaill address. Use grep to find the appropriate lines and output the results to a file called academia_users.txt.
 ```
-PROVIDE A SOLUTION HERE
+ggrep -Eo "\b[a-zA-Z.-]+@[a-zA-Z0-9.-]+.edu\,+\b" data/users.csv 
+
 ```
 
 
@@ -102,7 +107,10 @@ Ryan Howard did a poor job and used the CC field rather than the BCC field for t
 
 Use grep to identify the user with a single regex pattern.
 ```
-PROVIDE A SOLUTION HERE
+It is Clarice Curwood
+24,Clarice,Curwood,ccurwoodn@typepad.com,184.223.202.53,380-764-9066
+ggrep -E "\b[a-zA-Z.-]+@[a-zA-Z0-9.-]+.184+\b" data/users.csv
+
 ```
 
 
