@@ -141,5 +141,10 @@ This regex expression will ultimately be part of an automated data pipeline so w
 * Each field must be separated by a tab character.
 
 ```
+ggrep "" data/candidates_1.txt
+ggrep "[0-9]\S" data/candidates_1.txt
+ggrep "[0-9.]\S[^A-Za-z.]" data/candidates_1.txt
+ggrep "[0-9.]\S[^A-Za-z.]\S[A-Za-z]\S[A-Za-z.]" data/candidates_1.txt
+
 PROVIDE A SOLUTION HERE
 ```
