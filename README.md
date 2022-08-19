@@ -146,5 +146,10 @@ ggrep "[0-9]\S" data/candidates_1.txt
 ggrep "[0-9.]\S[^A-Za-z.]" data/candidates_1.txt
 ggrep "[0-9.]\S[^A-Za-z.]\S[A-Za-z]\S[A-Za-z.]" data/candidates_1.txt
 
-PROVIDE A SOLUTION HERE
+ggrep "Pennsylvania" data/candidates_1.txt
+ggrep -E "[Software|Developer]+.Pennsylvania" data/candidates_2.txt
+"(Software)|(Developer)" data/candidates_2.txt
+
+Current Solution:
+ggrep -E "(Software)|(Developer)" data/candidates_2.txt | ggrep -E "Pennsylvania" data/candidates_2.txt
 ```
